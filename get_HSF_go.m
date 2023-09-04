@@ -1,16 +1,5 @@
 function  Chs=get_HSF_go( par,SZA,SAA,VZA,VAA,Ps_dir_go,Pv_dir_go,z)
-%This routine calculates the hot spot factor based on Kuusk
-%input:
-%par:1/SL 
-%geometry in degree!
-%Gs\Gv:G function at solar and viewing directions
-%z:the height of a layer
-%CPF:correlation function
-%uL:FAVD
-%z:height z
-%output:
-%Chs:hot spot factor at height z
-%%
+
 SZA=deg2rad(SZA);SAA=deg2rad(SAA);
 VZA=deg2rad(VZA);VAA=deg2rad(VAA);
 mu0=cos(SZA);
