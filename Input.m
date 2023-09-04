@@ -7,8 +7,10 @@ SZA = 41;
 SAA = 147;
 VAAband = [327,327,327,327,327,327,327,327,327,327,327,327,327,327,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147];
 VZAband = [70,65,60,55,50,45,40,35,30,25,20,15,10,5,0,5,10,15,20,25,30,35,39,40,41,43,45,50,55,60,65,70];
+
+
 %% Canopy information
-iorien = 6;            %leaf orientation type£º1-planophile; 2-erectophile; 3-plagiophile;4-extremophile;5-uniform;6-spherical
+iorien = 6;            %leaf orientation typeÂ£Âº1-planophile; 2-erectophile; 3-plagiophile;4-extremophile;5-uniform;6-spherical
 FAVD = 0.8;            %foliage area volume density
 Height = 19.2;         %Canopy height
 HotSpotPar = 0.1;      %hotspot parameter at leaf scale (leaf size related)
@@ -23,8 +25,12 @@ step3 = 1; %BRF_CM
 step4 = 1; %BRF_GCM
 % BRF = BRF_S + BRF_L + BRF_CM + BRF_GCM
 Gassume = 0; % G can be field measured or assumed based the parameter iorien
+if Gassume ~=0
 G= [0.489890417605104	0.492020429278576	0.494434880542201	0.497108066956753	0.500248212410529	0.504034853843981	0.508435439666468	0.513468913953419	0.518941090533616	0.524110919285445	0.528360598840716	0.531440438474483	0.533221318660591	0.533672797840561	0.532333850979834	0.533672797840561	0.533221318660591	0.531440438474483	0.528360598840716	0.524110919285445	0.518941090533616	0.513468913953419	0.509484097788791	0.508435439666468	0.507529119549790	0.505822903506383	0.504034853843981	0.500248212410529	0.497108066956753	0.494434880542201	0.492020429278576	0.489890417605104];
-%%
+end
+%% end of Canopy information
+
+
 PATH_S = load([PATH_root, sprintf('AA%d_ZA%d_layers.mat', SAA, SZA)]);
 PATH_S = PATH_S.PATH;
 PATH_S = permute(PATH_S, [2,3,1]);
