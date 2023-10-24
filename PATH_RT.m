@@ -47,7 +47,7 @@ for m = 1:length(VZAband)   %1:length(VZAband)
     BRFs_kt = 0;
     if step1 == 1
         Ps_dir =  getDirGapHomo(Gs, FAVD, Crowndeepth, ls3);
-        Pv_dir =  getDirGapHomo(Gv, FAVD, Crowndeepth, ls3);
+        Pv_dir =  getDirGapHomo(Gv, FAVD, Crowndeepth, lv3);
         Chs = get_HSF(HotSpotPar,SZA,SAA,VZA,VAA,Gs,Gv,FAVD,Crowndeepth,ls3,lv3);
         BRFs = getBiDirGap(Pv_dir, Ps_dir, Chs) .* ro_s(m,:);
         BRFs_kt = getBiDirGap(Pv_dir, Ps_dir, 1) .* ro_s(m,:);
